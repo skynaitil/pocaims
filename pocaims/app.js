@@ -10,7 +10,7 @@ mongoose.connect('mongodb://localhost/pocaims', {promiseLibrary: require('bluebi
 .then(()=>console.log('connection successful'))
 .catch((err)=>console.error(err));
 
-var instructor = require('./routes/instructor');
+var user = require('./routes/user');
 var app = express();
 
 app.use(logger('dev'));
@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({'extended':'false'}));
 app.use(express.static(path.join(__dirname, 'build')));
 
-app.use('/api/instructor', instructor);
+app.use('/api/user', user);
 
 app.use(function(req,res,next){
     var err = new Error('Not Found');
