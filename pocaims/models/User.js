@@ -7,9 +7,11 @@ var UserSchema = new mongoose.Schema({
     password: String,
     email: String,
     role: String,
-    telNumber: Double,
+    telNumber: Number,
     validUser: Boolean,
     admin: Boolean
 });
 
 module.exports = mongoose.model('User', UserSchema);
+
+// Rmb to use \"xxxx\" style input when entering json
