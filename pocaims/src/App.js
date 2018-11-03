@@ -12,11 +12,11 @@ class App extends Component{
   }
 
   componentDidMount(){
-    axios.get('/api/user'
+    axios.get('/api/user')
     .then(res => {
       this.setState({users: res.data});
       console.log(this.state.users);
-    }))
+    })
   }
 
   render(){
@@ -41,7 +41,7 @@ class App extends Component{
       </thead>
 
       <tbody>
-        {this.state.users.map(user=>
+        {this.state.users.map(user =>
         <tr>
           <td><Link to={`/show/${user._id}`}>{user.role}</Link></td>
           <td>{user.firstName}</td>

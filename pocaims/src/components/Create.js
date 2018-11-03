@@ -22,7 +22,8 @@ class Create extends Component{
     }
 
     onChange = (e) => {
-        const state = this.statestate[e.target.name] = e.target.value;
+        const state = this.state
+        state[e.target.name] = e.target.value;
         this.setState(state);
     }
 
@@ -31,7 +32,7 @@ class Create extends Component{
 
         const {id, firstName, lastName, password,email, role,telNumber,validUser,admin} = this.state;
         
-        axios.post('/api/user', {id, firstName, lastName, password,email, role,telNumber,validUser,admin})
+        axios.post('/api/user', {id, firstName, lastName, password, email, role,telNumber,validUser,admin})
         .then((result) => {
             this.props.history.push("/")
         });
@@ -59,27 +60,27 @@ class Create extends Component{
               </div>
               <div class="form-group">
                 <label for="firstName">First Name:</label>
-                <input type="text" class="form-control" name="firstName" value={firstName} onChange={this.onChange} placeholder="firstName" />
+                <input type="text" class="form-control" name="firstName" value={firstName} onChange={this.onChange} placeholder="First Name" />
               </div>
               <div class="form-group">
                 <label for="lastName">Last Name:</label>
-                <input type="text" class="form-control" name="lastName" value={lastName} onChange={this.onChange} placeholder="LastName" />
+                <input type="text" class="form-control" name="lastName" value={lastName} onChange={this.onChange} placeholder="Last Name" />
               </div>
               <div class="form-group">
                 <label for="password">Password:</label>
-                <input type="text" class="form-control" name="password" value={password} onChange={this.onChange} placeholder="password" />
+                <input type="text" class="form-control" name="password" value={password} onChange={this.onChange} placeholder="Password" />
               </div>
               <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="text" class="form-control" name="email" value={email} onChange={this.onChange} placeholder="email" />
+                <input type="text" class="form-control" name="email" value={email} onChange={this.onChange} placeholder="Email" />
               </div>
               <div class="form-group">
                 <label for="role">Role:</label>
-                <input type="text" class="form-control" name="role" value={role} onChange={this.onChange} placeholder="role" />
+                <input type="text" class="form-control" name="role" value={role} onChange={this.onChange} placeholder="Role" />
               </div>
               <div class="form-group">
                 <label for="telNumber">Tel Number:</label>
-                <input type="text" class="form-control" name="telNumber" value={telNumber} onChange={this.onChange} placeholder="telNumber" />
+                <input type="text" class="form-control" name="telNumber" value={telNumber} onChange={this.onChange} placeholder="Telephone Number" />
               </div>            
               <button type="submit" class="btn btn-default">Submit</button>
             </form>
