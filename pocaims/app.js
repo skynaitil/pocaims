@@ -4,6 +4,12 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 
+var mongoose = require('mongoose');
+mongoose.Promise = require('bluebird');
+mongoose.connect('mongodb://localhost/pocaims', {promiseLibrary: require('bluebird')})
+.then(()=>console.log('connection successful'))
+.catch((err)=>console.error(err));
+
 var instructor = require('./routes/instructor');
 var app = express();
 
