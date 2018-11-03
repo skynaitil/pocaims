@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
-import App from '../App';
 
 class Create extends Component{
 
@@ -53,6 +52,7 @@ class Create extends Component{
 
             <div class="panel-body">
             <h4><Link to="/"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>User List</Link></h4>
+            
             <form onSubmit={this.onSubmit}>
               <div class="form-group">
                 <label for="id">ID:</label>
