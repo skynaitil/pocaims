@@ -21,7 +21,7 @@ class Create extends Component{
     }
 
     onChange = (e) => {
-        const state = this.state
+        const state = this.state;
         state[e.target.name] = e.target.value;
         this.setState(state);
     }
@@ -38,7 +38,7 @@ class Create extends Component{
     }
 
     render(){
-        const {id, firstName, lastName, password,email, role,telNumber,validUser,admin} = this.state;
+        const {id, firstName, lastName, password,email, role,telNumber} = this.state;
 
         return (
             <div class="container">
