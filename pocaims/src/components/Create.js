@@ -38,20 +38,18 @@ class Create extends Component{
     }
 
     render(){
-        const {id, firstName, lastName, password,email, role,telNumber} = this.state;
+        const {id, firstName, lastName, password,email, role, telNumber} = this.state;
 
         return (
             <div class="container">
             <div class="panel panel-default">
             
             <div class="panel-heading">
-            <h3 class="panel-title">
-            ADD USER
-            </h3>    
+            <h3 class="panel-title"> ADD USER</h3>    
             </div>
 
             <div class="panel-body">
-            <h4><Link to="/"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>User List</Link></h4>
+            <h4><Link to="/"><span class="fa fa-user" aria-hidden="true"></span>User List</Link></h4>
             
             <form onSubmit={this.onSubmit}>
               <div class="form-group">
@@ -74,15 +72,16 @@ class Create extends Component{
                 <label for="email">Email:</label>
                 <input type="text" class="form-control" name="email" value={email} onChange={this.onChange} placeholder="Email" />
               </div>
-              <div class="form-group">
-                <label for="role">Role:</label>
+               <div class="form-group">
+                <label for="role">Email:</label>
                 <input type="text" class="form-control" name="role" value={role} onChange={this.onChange} placeholder="Role" />
               </div>
               <div class="form-group">
                 <label for="telNumber">Tel Number:</label>
                 <input type="text" class="form-control" name="telNumber" value={telNumber} onChange={this.onChange} placeholder="Telephone Number" />
-              </div>            
-              <button type="submit" class="btn btn-default">Submit</button>
+              </div>    
+
+              <button type="submit" class="btn btn-primary">Submit</button>
             </form>
           </div>
         </div>

@@ -25,6 +25,7 @@ class App extends Component{
       <div class="panel panel-default">
       <div class="panel-heading">
       <h3 class="panel-title">
+      <i class="fa fa-user"></i>
         USER LIST
       </h3>
       </div>
